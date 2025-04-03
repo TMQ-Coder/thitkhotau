@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Làm Thịt Kho Tàu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .container {
+            width: 60%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d9534f;
+        }
+        .step {
+            background: #fff3cd;
+            padding: 10px;
+            border: 1px solid #ffeeba;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hướng Dẫn Làm Thịt Kho Tàu</h1>
+        <h3>Nguyên Liệu:</h3>
+        <ul>
+            <li>500g thịt ba chỉ</li>
+            <li>4 quả trứng vịt</li>
+            <li>2 thìa nước mắm</li>
+            <li>1 thìa đường</li>
+            <li>1 quả dừa tươi (lấy nước)</li>
+            <li>Hành, tỏi, tiêu, muối</li>
+        </ul>
+        <h3>Các Bước Làm:</h3>
+        <div class="step" onclick="toggleStep(1)">Bước 1: Chuẩn bị nguyên liệu</div>
+        <p id="step1" class="hidden">Rửa sạch thịt, cắt miếng vuông vừa ăn. Trứng luộc chín, bóc vỏ.</p>
+        
+        <div class="step" onclick="toggleStep(2)">Bước 2: Ướp thịt</div>
+        <p id="step2" class="hidden">Ướp thịt với nước mắm, đường, hành, tỏi băm trong 30 phút.</p>
+        
+        <div class="step" onclick="toggleStep(3)">Bước 3: Nấu thịt</div>
+        <p id="step3" class="hidden">Phi thơm hành tỏi, cho thịt vào đảo săn, sau đó thêm nước dừa và trứng.</p>
+        
+        <div class="step" onclick="toggleStep(4)">Bước 4: Hoàn thành</div>
+        <p id="step4" class="hidden">Đun nhỏ lửa trong 1 giờ, nêm nếm lại, tắt bếp và thưởng thức.</p>
+    </div>
+    
+    <script>
+        function toggleStep(stepNumber) {
+            let step = document.getElementById("step" + stepNumber);
+            step.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
