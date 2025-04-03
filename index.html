@@ -32,12 +32,19 @@
         .hidden {
             display: none;
         }
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hướng Dẫn Làm Thịt Kho Tàu</h1>
         <p><strong>Xin chào tất cả các bạn, mình là Quang đây và sau đây mình sẽ hướng dẫn các bạn làm thịt kho tàu.</strong></p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Thit_kho_tau.jpg" alt="Thịt kho tàu thành phẩm">
         <h3>Nguyên Liệu:</h3>
         <ul>
             <li>500g thịt ba chỉ</li>
@@ -50,21 +57,27 @@
         <h3>Các Bước Làm:</h3>
         <div class="step" onclick="toggleStep(1)">Bước 1: Chuẩn bị nguyên liệu</div>
         <p id="step1" class="hidden">Rửa sạch thịt, cắt miếng vuông vừa ăn. Trứng luộc chín, bóc vỏ.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Boiling_eggs.jpg" alt="Luộc trứng" class="hidden" id="img1">
         
         <div class="step" onclick="toggleStep(2)">Bước 2: Ướp thịt</div>
         <p id="step2" class="hidden">Ướp thịt với nước mắm, đường, hành, tỏi băm trong 30 phút.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Marinated_pork.jpg" alt="Ướp thịt" class="hidden" id="img2">
         
         <div class="step" onclick="toggleStep(3)">Bước 3: Nấu thịt</div>
         <p id="step3" class="hidden">Phi thơm hành tỏi, cho thịt vào đảo săn, sau đó thêm nước dừa và trứng.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Braised_pork_with_eggs.jpg" alt="Nấu thịt" class="hidden" id="img3">
         
         <div class="step" onclick="toggleStep(4)">Bước 4: Hoàn thành</div>
         <p id="step4" class="hidden">Đun nhỏ lửa trong 1 giờ, nêm nếm lại, tắt bếp và thưởng thức.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Thit_kho_tau.jpg" alt="Thành phẩm" class="hidden" id="img4">
     </div>
     
     <script>
         function toggleStep(stepNumber) {
             let step = document.getElementById("step" + stepNumber);
+            let img = document.getElementById("img" + stepNumber);
             step.classList.toggle("hidden");
+            img.classList.toggle("hidden");
         }
     </script>
 </body>
